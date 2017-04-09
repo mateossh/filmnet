@@ -8,7 +8,7 @@ class moviesController extends controller {
 		$model = $this->loadModel("movies");
 
 		// zleca modelowi wybranie najlepszych i najnowszych filmów
-		$topRated = $model->getTopRatedMovies(10);
+		$topRated = $model->getTopRatedMovies(3);
 		$mostRecent = $model->getMostRecentMovies(5);
 
 		// wczytuje widok movies
@@ -29,7 +29,7 @@ class moviesController extends controller {
 			$data = $model->getSingleMovieById($id);
 			$view = $this->loadView("movies");
 			$view->set("movies", $data);
-			$view->one();
+			$view->singleMovie();
 		}
 	}
 }

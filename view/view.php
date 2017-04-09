@@ -11,11 +11,11 @@ abstract class view {
 	}
 
 	public function set($var, $value) {
-		$this->var = $value;
+		$this->{$var} = $value;
 	}
 
 	public function get($var) {
-		return $this->var;
+		return $this->{$var};
 	}
 
 	public function notFound(){

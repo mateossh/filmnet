@@ -6,7 +6,7 @@ class moviesView extends view {
 		$this->render("mostRecentMovies");
 		$this->render("topRatedMovies");
 	}
-	public function one() {
+	public function singleMovie() {
 		$this->render("singleMovie");
 	}
 }

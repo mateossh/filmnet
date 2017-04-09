@@ -1,6 +1,6 @@
 <div class="list">
 	<h3> najnowsze filmy!!!!</h3>
-	<?php foreach($this->get("mostRecentMovies") as $movie): ?> 
+	<?php foreach($this->get("mostRecent") as $movie): ?> 
 			<br>
 			<span class="id" style="font-size: 1.3em">
 				<?= $movie["id"] ?>
