@@ -1,3 +1,11 @@
+<?php
+require("config.php");
+require(C_PATH."moviesController.php");
+
+$movie = new moviesController;
+$action = isset($_GET['action']) ? $_GET['action'] : "index";
+$task = isset($_GET['task']) ? $_GET['task'] : null;
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -24,7 +32,7 @@
 	</header>
 
 	<main class="Content">
-
+    <?php $movie->$action($task); ?>
 	</main>
 
 	<footer class="Footer">
@@ -35,5 +43,3 @@
 	<script src="scripts/slick.min.js"></script>
 	<!-- <script src="scripts/owl.carousel.min.js"></script> -->
 	<script src="scripts/main.js"></script>
-</body>
-</html>
