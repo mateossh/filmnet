@@ -1,12 +1,11 @@
-<div class="list">
-	<h3> najnowsze filmy!!!!</h3>
-	<?php foreach($this->get("mostRecent") as $movie): ?> 
-			<br>
-			<span class="id" style="font-size: 1.3em">
-				<?= $movie["id"] ?>
-			</span>
-			<span class="title" style="color: darkblue">
-				<?= $movie["title"] ?>
-			</span>
-	<?php endforeach; ?>
-</div>
+<section class="List">
+	<h2 class="List__Title">Premiery</h2>
+	<ul class="Carousel">
+		<?php foreach($this->get("mostRecent") as $movie): ?>
+		<li class="List__Item">
+			<img src="" />
+			<h3><?= $movie["title"] ?></h3>
+		</li>
+		<?php endforeach; ?>
+	</ul>
+</section>
