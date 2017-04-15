@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require("config.php");
 require(C_PATH."moviesController.php");
 

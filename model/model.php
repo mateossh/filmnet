@@ -23,8 +23,12 @@ abstract class model {
 		foreach ($select as $row) {
             $data[]=$row;
         }
-
-	    return $data;
+      
+        if (!empty($data)) {
+	    	return $data;
+		} else {
+			return false;
+		}
 	}
 }
 ?>

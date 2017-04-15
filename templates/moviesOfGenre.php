@@ -1,7 +1,10 @@
+<?php $genre = $this->get("movies")[0]; ?>
+
 <div class="list">
-	<h3> najnowsze filmy!!!!</h3>
-	<?php if(!empty($this->get("mostRecent"))): foreach($this->get("mostRecent") as $movie): ?> 
+	<h3> <?= $genre["name"]; ?> </h3>
+	<?php if(!empty($this->get("movies")[1])): foreach($this->get("movies")[1] as $movie): ?> 
 		<br>
+		
 		<span class="id" style="font-size: 1.3em">
 			<?= $movie["id"] ?>
 		</span>
@@ -10,5 +13,7 @@
 				<?= $movie["title"] ?>
 			</a>
 		</span>
-	<?php endforeach; endif; ?>
+	<?php endforeach; else: ?>
+		Nie ma filmów z tego gatunku;
+	<?php endif; ?>
 </div>
