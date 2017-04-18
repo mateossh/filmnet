@@ -1,19 +1,19 @@
 <?php $genre = $this->get("movies")[0]; ?>
 
-<div class="list">
-	<h3> <?= $genre["name"]; ?> </h3>
-	<?php if(!empty($this->get("movies")[1])): foreach($this->get("movies")[1] as $movie): ?> 
-		<br>
-		
-		<span class="id" style="font-size: 1.3em">
-			<?= $movie["id"] ?>
-		</span>
-		<span class="title" style="color: darkblue">
-			<a href="index.php?action=singleMovie&task=<?= $movie['id'] ?>">
-				<?= $movie["title"] ?>
-			</a>
-		</span>
-	<?php endforeach; else: ?>
-		Nie ma filmów z tego gatunku;
-	<?php endif; ?>
-</div>
+<?php if(!empty($this->get("movies")[1])): ?>
+<section class="List">
+	<h2 class="List__Title">Kategoria: <?= $genre['name'] ?></h2>
+	<ul class="Carousel">
+		<?php foreach($this->get("movies")[1] as $movie): ?>
+			<li class="List__Item"><a href="index.php?action=singleMovie&task=<?= $movie['id'] ?>">
+				<img src="<?= $movie['poster'] ?>" />
+				<h3><?= $movie['title'] ?></h3>
+			</a></li>
+		<?php endforeach; ?>
+	</ul>
+</section>
+<?php else: ?>
+	<div class="NotFound">
+		Nie ma filmów z tego gatunku
+	</div>
+<?php endif; ?>
