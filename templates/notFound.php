@@ -1,1 +1,3 @@
-Nie znaleziono filmu o tym id
+<div class="NotFound">
+  Nie znaleziono filmu o tym id
+</div>
