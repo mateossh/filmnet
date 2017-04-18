@@ -1,14 +1,10 @@
-<div class="list">
-	<h3> gatunki!!!!</h3>
-	<?php if(!empty($this->get("genres"))): foreach($this->get("genres") as $genre): ?> 
-		<br>
-		<span class="id" style="font-size: 1.3em">
-			<?= $genre["id"] ?>
-		</span>
-		<span class="title" style="color: darkblue">
-			<a href="index.php?action=listMoviesByGenre&task=<?= $genre['id'] ?>">
-				<?= $genre["name"] ?>
-			</a>
-		</span>
+<section class="List">
+	<h2 class="List__Title">Gatunki</h2>
+	<ul class="Carousel">
+	<?php if(!empty($this->get("genres"))): foreach($this->get("genres") as $genre): ?>
+		<li class="List__Item"><a href="index.php?action=listMoviesByGenre&task=<?= $genre['id'] ?>">
+			<h3><?= $genre['name'] ?></h3>
+		</a></li>
 	<?php endforeach; endif; ?>
-</div>
+	</ul>
+</section>
