@@ -14,6 +14,10 @@ class moviesView extends view {
 	public function listMoviesByGenre() {
 		$this->render("moviesOfGenre");
 	}
+
+	public function searchList() {
+		$this->render("searchList");
+	}
 }
 
 ?>

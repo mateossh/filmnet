@@ -5,6 +5,23 @@ $(document).ready(function() {
 	// 	'items': 3
 	// });
 
+	var input = $('.Searchbar__Input');
+	input.on("input", function() {
+		if (input.val().length >= 1) {
+			$.ajax({
+				data: "val=" + input.val(),
+				method: "POST",
+				url: "searchbar.php",
+				success: function(data) {
+					$(".result").html(data);
+					console.log(data);
+				}
+			})
+		} else {
+			$(".result").html("");
+		}
+	})
+	
 	$('.Carousel').slick({
 		arrows: false,
 		infinite: false,

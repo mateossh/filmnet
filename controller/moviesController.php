@@ -8,8 +8,8 @@ class moviesController extends controller {
 		$model = $this->loadModel("movies");
 
 		// zleca modelowi wybranie najlepszych i najnowszych filmów
-		$topRated = $model->getTopRatedMovies(3);
-		$mostRecent = $model->getMostRecentMovies(5);
+		$topRated = $model->getTopRatedMovies(9);
+		$mostRecent = $model->getMostRecentMovies(9);
 		$genres = $model->getGenresList();
 
 		// wczytuje widok movies
@@ -23,39 +23,56 @@ class moviesController extends controller {
 	}
 
 	public function singleMovie($id) {
-		if (!isset($id)) {
-			// jeśli nie ma id to wyświetla stronę notFound.php
-			$view = $this->loadView("movies");
-			$view->notFound();
-		} else {
+		try {
+			// jeśli nie ma wpisanego id to zwraca wyjątek
+			if (is_null($id)) throw new Exception();
+			// wczytuje model
 			$model = $this->loadModel("movies");
 			// pobiera informacje o filmie
 			$movieInfo = $model->getSingleMovieById($id);
+			// jeśli wynik = null to zwraca wyjątek
+			if (is_null($movieInfo)) throw new Exception();
 			// wczytuje widok
 			$view = $this->loadView("movies");
 			// wysyła widokowi dane do wyświetlenia
 			$view->set("movie", $movieInfo);
 			// wczytuje widok jednego filmu
-			$view->singleMovie();
+			$view->singleMovie();			
+		} catch(Exception $e) {
+			$view = $this->loadView("movies");
+			$view->set("message", "Nie znaleziono filmu o tym id :>");
+			$view->notFound();
 		}
 	}
 
 	public function listMoviesByGenre($id) {
-		if (!isset($id)) {
-			// jeśli nie ma id to wyświetla stronę notFound.php
-			$view = $this->loadView("movies");
-			$view->notFound();
-		} else {
+		try {
+			if (!$id) throw new Exception();
+			// wczytuje model
 			$model = $this->loadModel("movies");
 			// pobiera informacje o filmie
 			$movies = $model->getMoviesByGenre($id);
+			if (!$movies) throw new Exception();
 			// wczytuje widok
 			$view = $this->loadView("movies");
 			// wysyła widokowi dane do wyświetlenia
 			$view->set("movies", $movies);
 			// wczytuje widok jednego filmu
 			$view->listMoviesByGenre();
+		} catch (Exception $e) {
+			$view = $this->loadView("movies");
+			$view->set("message", "Nie znaleziono filmów o tym gatunku");
+			$view->notFound();
 		}
+	}
+
+	public function search($name) {
+		$model = $this->loadModel("movies");
+		$data = $model->getMoviesByName($name);
+
+		$view = $this->loadView("movies");
+		$view->set("movies", $data);
+		$view->searchList();
 	}
 }
 ?>
