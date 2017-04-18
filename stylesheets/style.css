@@ -61,7 +61,7 @@ a {
 	text-decoration: none;
 }
 
-.clearfix:after {
+.Clearfix:after {
 	content: "";
 	display: table;
 	clear: both;
@@ -107,6 +107,13 @@ a {
 	width: calc(100% - 24px);
 }
 
+@media screen and (min-width: 1200px) {
+	.Content {
+		width: 1200px;
+		margin: 12px auto;
+	}
+}
+
 /* ==============================================
 	LIST (e.g for movies on index)
 	============================================== */
@@ -141,11 +148,83 @@ a {
 }
 
 /* ==============================================
+	SINGLE
+	============================================== */
+
+.Single {}
+
+.Single__Poster {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.Single__Information {}
+
+.Single__Title {
+	font-size: 1.75em;
+	font-weight: bold;
+	margin: 32px 0;
+}
+
+.Single__Description {
+	font-size: 1.15em;
+	line-height: 1.6;
+	margin: 16px 0;
+}
+
+.Single__Details {
+	margin: 24px 0;
+}
+
+.Single__DetailsItem {
+	margin: 24px 0;
+	line-height: 1.2;
+}
+
+.Single__DetailsItem > *:last-child {
+	max-width: 70%;
+	float: right;
+	margin-left: 6px;
+	text-align: right;
+}
+
+.Single__Genres {}
+.Single__ReleaseDate {}
+.Single__Director {}
+.Single__Writer {}
+
+@media screen and (min-width: 600px) {
+	.Single__Poster {
+		width: 30%;
+		float: left;
+	}
+	.Single__Information {
+		width: calc(70% - 12px);
+		float: right;
+		margin-left: 12px;
+	}
+	.Single__Title {
+		margin: 0 0 36px 0;
+		font-size: 2em;
+	}
+	.Single__Description {
+		margin: 32px 0;
+	}
+	.Single__Details {
+		margin: 32px 0;
+	}
+}
+
+
+
+/* ==============================================
 		FOOTER
 	============================================== */
 
 .Footer {
 	text-align: center;
 	color: #292929;
-	margin: 12px 0;
+	margin: 48px 0 32px 0;
+	display: block;
+	width: 100%;
 }
