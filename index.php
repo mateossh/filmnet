@@ -23,12 +23,12 @@ $task = isset($_GET['task']) ? $_GET['task'] : null;
 </head>
 <body>
 	<header class="Header">
-		<h1 class="Header__Logo">FilmNet</h1>
+		<h1 class="Header__Logo"><a href="#">FilmNet</a></h1>
 		<nav class="Header__Menu Menu">
-			<!-- <span class="Menu__Item">Top 100</span>
-			<span class="Menu__Item">Premiery</span> -->
-			<span class="Menu__Item">Szukaj</span>
-			<input type="text"/>
+			<div class="Searchbar">
+				<input class="Searchbar__Input" type="text" placeholder="Szukaj..." />
+				<span class="Searchbar__Icon"></span>
+			</div>
 		</nav>
 	</header>
 
