@@ -14,7 +14,7 @@
 </head>
 <body>
 	<header class="Header">
-		<h1 class="Header__Logo"><a href="#">FilmNet</a></h1>
+		<h1 class="Header__Logo"><a href="index.php">FilmNet</a></h1>
 		<nav class="Header__Menu Menu">
 			<div class="Searchbar">
 				<input class="Searchbar__Input" type="text" placeholder="Szukaj..." />
