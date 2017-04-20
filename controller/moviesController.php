@@ -61,7 +61,7 @@ class moviesController extends controller {
 			$view->listMoviesByGenre();
 		} catch (Exception $e) {
 			$view = $this->loadView("movies");
-			$view->set("message", "Nie znaleziono filmów o tym gatunku");
+			$view->set("message", "Nie znaleziono filmów w tej kategorii :>");
 			$view->notFound();
 		}
 	}
