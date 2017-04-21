@@ -29,6 +29,7 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		adaptiveHeight: true,
 		mobileFirst: true,
+		swipeToSlide: true,
 		// useCSS: true,
 		responsive: [
 			{
