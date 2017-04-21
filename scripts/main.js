@@ -13,15 +13,15 @@ $(document).ready(function() {
 				method: "POST",
 				url: "searchbar.php",
 				success: function(data) {
-					$(".result").html(data);
+					$(".Searchbar__Results").html(data);
 					console.log(data);
 				}
 			})
 		} else {
-			$(".result").html("");
+			$(".Searchbar__Results").html("");
 		}
 	})
-	
+
 	$('.Carousel').slick({
 		arrows: false,
 		infinite: false,

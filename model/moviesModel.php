@@ -39,7 +39,7 @@ class moviesModel extends model {
 	}
 
 	public function getMoviesByName($name) {
-		$movies = $this->select("movies", "id, title", "title LIKE '%$name%'");
+		$movies = $this->select("movies", "*", "title LIKE '%$name%' LIMIT 5");
 		return $movies;
 	}
 }
