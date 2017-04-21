@@ -7,4 +7,8 @@
 		</div>
 	</span></a>
 <?php endforeach; ?>
-<?php else: endif;?>
+<?php else: ?>
+	<span class="Results__Item--slim">
+		Brak wyników.
+	</span>
+<?php endif;?>

@@ -143,6 +143,14 @@ a {
 	position: relative;
 }
 
+.Results__Item--slim {
+	margin: 24px 12px;
+	text-align: center;
+	display: block;
+	/*height: 32px;*/
+	position: relative;
+}
+
 .Results__ItemContent {
 	display: block;
 	position: absolute;
