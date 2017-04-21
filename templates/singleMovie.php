@@ -12,10 +12,10 @@
 				Premiera: <span class="Single__ReleaseDate"><?= $movie['release_date'] ?></span>
 			</li>
 			<li class="Single__DetailsItem">
-				Reżyser: <span class="Single__Director"><?= $movie['director'] ?></span>
+				Reżyseria: <span class="Single__Director"><?= $movie['director'] ?></span>
 			</li>
 			<li class="Single__DetailsItem">
-				Scenarzysta: <span class="Single__Writer"><?= $movie['writer'] ?></span>
+				Scenariusz: <span class="Single__Writer"><?= $movie['writer'] ?></span>
 			</li>
 			<li class="Single__DetailsItem">
 				Gatunki: <span class="Single__Genres">
