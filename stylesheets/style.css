@@ -127,10 +127,11 @@ a {
 
 .Searchbar__Results {
 	position: absolute;
-	top: calc(38px + 6px);
+	margin-top: 12px;
 	background: #333333;
 	color: white;
-	width: 400px;
+	width: 100%;
+	z-index: 1;
 }
 
 .Results {}
@@ -157,7 +158,7 @@ a {
 	top: 0;
 	bottom: 0;
 	display: inline-block;
-	width: calc(370px - 64px);
+	width: calc(100% - 72px);
 	margin-left: 12px;
 }
 
@@ -175,6 +176,18 @@ a {
 	max-height: 96px;
 	display: inline-block;
 	float: left;
+}
+
+@media screen and (min-width: 600px) {
+	.Searchbar__Results {
+		width: 400px;
+		left: 0;
+		right: 0;
+		margin: 12px auto 0 auto;
+	}
+	.Results__ItemContent {
+		width: calc(370px - 64px);
+	}
 }
 
 .

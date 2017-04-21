@@ -28,9 +28,9 @@ $task = isset($_GET['task']) ? $_GET['task'] : null;
 			<div class="Searchbar">
 				<input class="Searchbar__Input" type="text" placeholder="Szukaj..." />
 				<span class="Searchbar__Icon"></span>
-				<div class="Searchbar__Results Results"></div>
-				<div class="Clearfix"></div>
 			</div>
+			<div class="Searchbar__Results Results"></div>
+			<div class="Clearfix"></div>
 		</nav>
 	</header>
 
