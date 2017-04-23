@@ -1,6 +1,6 @@
-<?php $genre = $this->get("movies")[0]; ?>
+<?php $genre = $this->get("genre"); ?>
 
-<?php if(!empty($this->get("movies")[1])): ?>
+<?php if(!empty($this->get("movies"))): ?>
 <section class="List">
 	<h2 class="List__Title">Kategoria: <?= $genre['name'] ?></h2>
 	<ul class="Carousel">
