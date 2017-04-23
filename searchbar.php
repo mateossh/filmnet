@@ -1,9 +1,9 @@
 <?php
 
-require("config.php");
-require(C_PATH."moviesController.php");
+require_once("config.php");
+require_once(C_PATH."pageController.php");
 
-$movies = new moviesController;
+$movies = new pageController;
 $movies->search($_POST['val']);
 
 ?>

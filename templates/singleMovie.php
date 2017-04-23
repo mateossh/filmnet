@@ -19,13 +19,19 @@
 			</li>
 			<li class="Single__DetailsItem">
 				Gatunki: <span class="Single__Genres">
-					<?php if (!empty($movie["genres"])): foreach ($movie["genres"] as $genre): ?>
+					<?php if (!empty($this->get("genres"))): foreach ($this->get("genres") as $genre): ?>
 						<span class="genre_<?= $genre["id"] ?>">
 							<?= $genre["name"] ?>
 						</span>
 					<?php endforeach; endif; ?>
 				</span>
 			</li>
+			aktorzyny: <span class="Single__Genres">
+					<?php if (!empty($this->get("actors"))): foreach ($this->get("actors") as $actor): ?>
+						<a href="index.php?action=singleActor&task=<?= $actor['id'] ?>" class="genre_<?= $actor["id"] ?>">
+							<?= $actor["name"]." ".$actor["surname"]." jako ".$actor['role'].", " ?>
+						</a>
+					<?php endforeach; endif; ?>
 		</ul>
 	</div>
 </section>

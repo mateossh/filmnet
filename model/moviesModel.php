@@ -1,5 +1,5 @@
 <?php
-require("model/model.php");
+require_once("model/model.php");
 
 class moviesModel extends model {
 	public function getTopRatedMovies($limit) {
@@ -13,33 +13,29 @@ class moviesModel extends model {
 	// bierze jeden film o podanym id
 	public function getSingleMovieById($id) {
 		// pobiera dane
-		$genres = $this->select("genres, genres_list", "genres_list.id, genres_list.name", "genres.genre_id = genres_list.id AND genres.movie_id = $id");
 		$movieInfo = $this->select("movies", "*", "id = $id");
 		// tablicę z gatunkami dodaje do tej z informacjami o filmie
 		$movieInfo = $movieInfo[0];
-		if (!empty($genres)) {
-			$movieInfo["genres"] = $genres;
-		}
 		return $movieInfo;
 	}
 
 	public function getGenresList() {
 		return $this->select("genres_list");
 	}
-
+	
 	public function getMoviesByGenre($id) {
 		$movies = $this->select("genres, genres_list, movies", "movies.*", "genres.genre_id = genres_list.id AND genres.movie_id = movies.id AND genres_list.id = $id");
-		$info = null;
-		if (!empty($movies)) {
-			$genre = $this->select("genres_list", "*", "genres_list.id = $id");
-			$info = $genre;
-			$info[1] = $movies;
-		}
-		return $info;
+		$movies[1] = $movies;
+		return $movies;
 	}
 
-	public function getMoviesByName($name) {
-		$movies = $this->select("movies", "*", "title LIKE '%$name%' LIMIT 5");
+	public function getMoviesByName($name, $limit) {
+		$movies = $this->select("movies", "*", "title COLLATE utf8_polish_ci LIKE '%$name%'", null, $limit);
+		return $movies;
+	}
+
+	public function getMoviesOfActor($id) {
+		$movies = $this->select("movies, actors", "movies.*, actors.role", "actors.movie_id = movies.id AND actors.actor_id = $id");
 		return $movies;
 	}
 }

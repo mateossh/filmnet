@@ -1,8 +1,8 @@
 ﻿<?php
 require("config.php");
-require(C_PATH."moviesController.php");
+require(C_PATH."pageController.php");
 
-$movie = new moviesController;
+$movie = new pageController;
 $action = isset($_GET['action']) ? $_GET['action'] : "index";
 $task = isset($_GET['task']) ? $_GET['task'] : null;
 ?>
