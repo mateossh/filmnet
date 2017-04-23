@@ -83,12 +83,18 @@ a {
 	font-weight: 900;
 	margin-bottom: 36px;
 }
+
+/* ==============================================
+		SEARCH
+	============================================== */
+
 .Searchbar {
 	margin: 0 auto;
 	width: 250px;
 	height: 38px;
 	position: relative;
 	border-bottom: 1px solid white;
+	z-index: 1;
 }
 .Searchbar__Input {
 	background: 0;
@@ -118,6 +124,73 @@ a {
 	height: 24px;
 	/*line-height: 24px;*/
 }
+
+.Searchbar__Results {
+	position: absolute;
+	margin-top: 12px;
+	background: #333333;
+	color: white;
+	width: 100%;
+	z-index: 1;
+}
+
+.Results {}
+
+.Results__Item {
+	margin: 24px 12px;
+	text-align: left;
+	display: block;
+	height: 96px;
+	position: relative;
+}
+
+.Results__Item--slim {
+	margin: 24px 12px;
+	text-align: center;
+	display: block;
+	/*height: 32px;*/
+	position: relative;
+}
+
+.Results__ItemContent {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: inline-block;
+	width: calc(100% - 72px);
+	margin-left: 12px;
+}
+
+.Results__Item h3 {
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.Results__Item p {
+	display: block;
+}
+
+.Results__Item img {
+	width: auto;
+	max-height: 96px;
+	display: inline-block;
+	float: left;
+}
+
+@media screen and (min-width: 600px) {
+	.Searchbar__Results {
+		width: 400px;
+		left: 0;
+		right: 0;
+		margin: 12px auto 0 auto;
+	}
+	.Results__ItemContent {
+		width: calc(370px - 64px);
+	}
+}
+
+.
 
 /* ==============================================
 		MENU

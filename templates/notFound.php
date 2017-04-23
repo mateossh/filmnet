@@ -1,3 +1,3 @@
 <div class="NotFound">
-  Nie znaleziono filmu o tym id
+  <?= $this->get("message"); ?>
 </div>

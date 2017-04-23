@@ -1,8 +1,8 @@
 ﻿<?php
 require("config.php");
-require(C_PATH."moviesController.php");
+require(C_PATH."pageController.php");
 
-$movie = new moviesController;
+$movie = new pageController;
 $action = isset($_GET['action']) ? $_GET['action'] : "index";
 $task = isset($_GET['task']) ? $_GET['task'] : null;
 ?>
@@ -23,14 +23,17 @@ $task = isset($_GET['task']) ? $_GET['task'] : null;
 </head>
 <body>
 	<header class="Header">
-		<h1 class="Header__Logo"><a href="#">FilmNet</a></h1>
+		<h1 class="Header__Logo"><a href="index.php">FilmNet</a></h1>
 		<nav class="Header__Menu Menu">
 			<div class="Searchbar">
 				<input class="Searchbar__Input" type="text" placeholder="Szukaj..." />
 				<span class="Searchbar__Icon"></span>
 			</div>
+			<div class="Searchbar__Results Results"></div>
+			<div class="Clearfix"></div>
 		</nav>
 	</header>
+
 
 	<main class="Content">
 		<?php $movie->$action($task); ?>
