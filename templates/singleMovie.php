@@ -26,12 +26,20 @@
 					<?php endforeach; endif; ?>
 				</span>
 			</li>
-			aktorzyny: <span class="Single__Genres">
-					<?php if (!empty($this->get("actors"))): foreach ($this->get("actors") as $actor): ?>
-						<a href="index.php?action=singleActor&task=<?= $actor['id'] ?>" class="genre_<?= $actor["id"] ?>">
-							<?= $actor["name"]." ".$actor["surname"]." jako ".$actor['role'].", " ?>
-						</a>
-					<?php endforeach; endif; ?>
+			<li class="Single__DetailsItem">
+				Obsada: <span class="Single__Cast">
+					<ul class="Cast">
+						<?php if (!empty($this->get("actors"))): foreach ($this->get("actors") as $actor): ?>
+							<li class="Cast__Item">
+								<a class="Cast__Actor" href="index.php?action=singleActor&task=<?= $actor['id'] ?>">
+									<?= $actor["name"]." ".$actor["surname"] ?>
+								</a>
+								jako <?= $actor['role'] ?>
+							</li>
+						<?php endforeach; endif; ?>
+					</ul>
+				</span>
+			</li>
 		</ul>
 	</div>
 </section>

@@ -1,0 +1,6 @@
+#TODO
+
+* get rid of slider in "genres" on index.php
+* make template that renders when user clicks "lupa" in searchbar
+* add link in genres on singleMovie.php
+* hide search results when you click somewhere on site

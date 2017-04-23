@@ -299,6 +299,7 @@ a {
 .Single__ReleaseDate {}
 .Single__Director {}
 .Single__Writer {}
+.Single__Cast {}
 
 @media screen and (min-width: 600px) {
 	.Single__Poster {
@@ -320,6 +321,16 @@ a {
 	.Single__Details {
 		margin: 32px 0;
 	}
+}
+
+.Cast, .Roles {}
+
+.Cast__Item:not(:first-of-type), .Roles__Item:not(:first-of-type) {
+	margin: 6px 0;
+}
+
+.Cast__Actor, .Roles__Role {
+	font-weight: bold;
 }
 
 /* ==============================================
