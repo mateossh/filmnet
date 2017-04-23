@@ -16,6 +16,7 @@ $task = isset($_GET['task']) ? $_GET['task'] : null;
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,900&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="stylesheets/style.css" />
 	<link rel="stylesheet" href="stylesheets/slick.css"  />
+	<link rel="icon" href="favicon.png">
 	<!-- <link rel="stylesheet" href="stylesheets/owl.carousel.min.css"  /> -->
 	<!-- <link rel="stylesheet" href="stylesheets/owl.theme.default.min.css"  /> -->
 

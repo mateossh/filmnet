@@ -83,6 +83,7 @@ class pageController extends controller {
 		$data = $model->getMoviesByName($name, 5);
 
 		$view = $this->loadView("movies");
+		$view->set("phrase", $name);
 		$view->set("movies", $data);
 		$view->searchList();
 	}

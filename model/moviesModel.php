@@ -35,7 +35,7 @@ class moviesModel extends model {
 	}
 
 	public function getMoviesOfActor($id) {
-		$movies = $this->select("movies, actors", "movies.*, actors.role", "actors.movie_id = movies.id AND actors.actor_id = $id");
+		$movies = $this->select("movies, actors", "movies.*, actors.role", "actors.movie_id = movies.id AND actors.actor_id = $id", "movies.release_date DESC");
 		return $movies;
 	}
 }

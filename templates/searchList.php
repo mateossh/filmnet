@@ -6,8 +6,13 @@
 			<p><?= substr($movie['description'],0,100) . "..." ?></p>
 		</div>
 	</span></a>
-<?php endforeach; ?>
-<?php else: ?>
+<?php endforeach; if (count($this->get("movies")) > 4): ?>
+	<span class="Results__Item--slim">
+		<a href="index.php?action=searchList&task=<?= $this->get("phrase") ?>">
+			Więcej wyników.
+		</a>
+	</span>
+<?php endif; else: ?>
 	<span class="Results__Item--slim">
 		Brak wyników.
 	</span>
