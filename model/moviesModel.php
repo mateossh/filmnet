@@ -3,7 +3,7 @@ require_once("model/model.php");
 
 class moviesModel extends model {
 	public function getTopRatedMovies($limit) {
-		return $this->select("movies", "*", "id IN (1,4,6,7,11,19,13)", null, $limit);
+		return $this->select("movies", "*", "id IN (13, 14, 6, 8, 9, 10, 23)", null, $limit);
 	}
 
 	public function getMostRecentMovies($limit) {
@@ -22,7 +22,7 @@ class moviesModel extends model {
 	public function getGenresList() {
 		return $this->select("genres_list");
 	}
-	
+
 	public function getMoviesByGenre($id) {
 		$movies = $this->select("genres, genres_list, movies", "movies.*", "genres.genre_id = genres_list.id AND genres.movie_id = movies.id AND genres_list.id = $id");
 		$movies[1] = $movies;
