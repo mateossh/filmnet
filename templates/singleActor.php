@@ -18,7 +18,7 @@
 				Role w filmach: <ul class="Cast Roles">
 					<?php if (!empty($this->get("movies"))): foreach ($this->get("movies") as $movie): ?>
 						<li class="Roles__Item">
-							<a class="Roles__Role" href="index.php?action=singleActor&task=<?= $actor['id'] ?>">
+							<a class="Roles__Role" href="index.php?action=singleMovie&task=<?= $movie['id'] ?>">
 								<?= $movie["title"] ?>
 							</a>
 							jako <?= $movie["role"] ?>
