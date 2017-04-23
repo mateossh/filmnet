@@ -4,7 +4,6 @@ $(document).ready(function() {
 	// $('.Carousel').owlCarousel({
 	// 	'items': 3
 	// });
-
 	var input = $('.Searchbar__Input');
 	input.on("input", function() {
 		if (input.val().length >= 1) {
@@ -19,6 +18,12 @@ $(document).ready(function() {
 			})
 		} else {
 			$(".Searchbar__Results").html("");
+		}
+	})
+
+	$(document).on("click", function() {
+		if($(".Searchbar__Results").html() != "") {
+			$(".Results").html("");
 		}
 	})
 

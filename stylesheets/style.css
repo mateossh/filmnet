@@ -296,6 +296,17 @@ a {
 }
 
 .Single__Genres {}
+
+.Single__Genres span:not(:last-of-type) {
+	margin-right: 6px;
+}
+
+.Single__Genres span:not(:last-of-type):after {
+	content: ",";
+	display: inline;
+	margin-left: -4px;
+}
+
 .Single__ReleaseDate {}
 .Single__Director {}
 .Single__Writer {}

@@ -20,9 +20,9 @@
 			<li class="Single__DetailsItem">
 				Gatunki: <span class="Single__Genres">
 					<?php if (!empty($this->get("genres"))): foreach ($this->get("genres") as $genre): ?>
-						<span class="genre_<?= $genre["id"] ?>">
+						<span class="genre_<?= $genre["id"] ?>"><a href="index.php?action=listMoviesByGenre&task=<?= $genre['id'] ?>">
 							<?= $genre["name"] ?>
-						</span>
+						</a></span>
 					<?php endforeach; endif; ?>
 				</span>
 			</li>
