@@ -1,0 +1,367 @@
+/* ==============================================
+		RESET
+	============================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ==============================================
+		MAIN
+	============================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Raleway", sans-serif;
+	background: #f2f2f2;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.Clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/* ==============================================
+		HEADER
+	============================================== */
+
+.Header {
+	width: 100%;
+	background: #292929;
+	color: white;
+	padding: 36px 0;
+}
+
+.Header__Logo {
+	text-align: center;
+	font-size: 2.65em;
+	font-weight: 900;
+	margin-bottom: 36px;
+}
+
+/* ==============================================
+		SEARCH
+	============================================== */
+
+.Searchbar {
+	margin: 0 auto;
+	width: 250px;
+	height: 38px;
+	position: relative;
+	border-bottom: 1px solid white;
+	z-index: 1;
+}
+.Searchbar__Input {
+	background: 0;
+	outline: none;
+	border: none;
+	width: calc(250px - 38px);
+	/*height: 38px;*/
+	padding: 4px;
+	margin: 0 auto;
+	font-size: 28px;
+	color: white;
+	font-family: "Raleway";
+	font-weight: 400;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.Searchbar__Icon {
+	position: absolute;
+	right: 4px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	/* this icon: http://www.flaticon.com/free-icon/search_149309#term=search&page=1&position=2*/
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUyLjk2NiA1Mi45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUyLjk2NiA1Mi45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KPHBhdGggZD0iTTUxLjcwNCw1MS4yNzNMMzYuODQ1LDM1LjgyYzMuNzktMy44MDEsNi4xMzgtOS4wNDEsNi4xMzgtMTQuODJjMC0xMS41OC05LjQyLTIxLTIxLTIxcy0yMSw5LjQyLTIxLDIxczkuNDIsMjEsMjEsMjEgIGM1LjA4MywwLDkuNzQ4LTEuODE3LDEzLjM4NC00LjgzMmwxNC44OTUsMTUuNDkxYzAuMTk2LDAuMjA1LDAuNDU4LDAuMzA3LDAuNzIxLDAuMzA3YzAuMjUsMCwwLjQ5OS0wLjA5MywwLjY5My0wLjI3OSAgQzUyLjA3NCw1Mi4zMDQsNTIuMDg2LDUxLjY3MSw1MS43MDQsNTEuMjczeiBNMjEuOTgzLDQwYy0xMC40NzcsMC0xOS04LjUyMy0xOS0xOXM4LjUyMy0xOSwxOS0xOXMxOSw4LjUyMywxOSwxOSAgUzMyLjQ1OSw0MCwyMS45ODMsNDB6IiBmaWxsPSIjRkZGRkZGIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+	width: 24px;
+	height: 24px;
+	/*line-height: 24px;*/
+}
+
+.Searchbar__Results {
+	position: absolute;
+	margin-top: 12px;
+	background: #333333;
+	color: white;
+	width: 100%;
+	z-index: 1;
+}
+
+.Results {}
+
+.Results__Item {
+	margin: 24px 12px;
+	text-align: left;
+	display: block;
+	height: 96px;
+	position: relative;
+}
+
+.Results__Item--slim {
+	margin: 24px 12px;
+	text-align: center;
+	display: block;
+	/*height: 32px;*/
+	position: relative;
+}
+
+.Results__ItemContent {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: inline-block;
+	width: calc(100% - 72px);
+	margin-left: 12px;
+}
+
+.Results__Item h3 {
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.Results__Item p {
+	display: block;
+}
+
+.Results__Item img {
+	width: auto;
+	max-height: 96px;
+	display: inline-block;
+	float: left;
+}
+
+@media screen and (min-width: 600px) {
+	.Searchbar__Results {
+		width: 400px;
+		left: 0;
+		right: 0;
+		margin: 12px auto 0 auto;
+	}
+	.Results__ItemContent {
+		width: calc(370px - 64px);
+	}
+}
+
+.
+
+/* ==============================================
+		MENU
+	============================================== */
+
+.Menu {}
+
+.Menu__Item {
+	display: block;
+	margin: 24px 0;
+	text-align: center;
+	font-size: 1.4em;
+}
+
+/* ==============================================
+		CONTENT
+	============================================== */
+
+.Content {
+	margin: 12px;
+	width: calc(100% - 24px);
+}
+
+@media screen and (min-width: 1200px) {
+	.Content {
+		width: 1200px;
+		margin: 12px auto;
+	}
+}
+
+/* ==============================================
+	LIST (e.g for movies on index)
+	============================================== */
+
+.List {
+	margin: 20px 0;
+}
+
+.List__Title {
+	font-weight: 700;
+	font-size: 2em;
+	margin: 32px 0;
+	text-align: center;
+}
+
+.List__Item {
+	display: block;
+	text-align: center;
+	margin: 32px 12px;
+	/*width: 33.3%;*/
+}
+
+.List__Item img {
+	/*width: auto;
+	max-height: 35vh;*/
+	width: 100%;
+}
+
+.List__Item h3 {
+	margin: 10px 0;
+	font-size: 1.45em;
+}
+
+/* ==============================================
+	SINGLE
+	============================================== */
+
+.Single {}
+
+.Single__Poster {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.Single__Information {}
+
+.Single__Title {
+	font-size: 1.75em;
+	font-weight: bold;
+	margin: 32px 0;
+}
+
+.Single__Description {
+	font-size: 1.15em;
+	line-height: 1.6;
+	margin: 16px 0;
+}
+
+.Single__Details {
+	margin: 24px 0;
+}
+
+.Single__DetailsItem {
+	margin: 24px 0;
+	line-height: 1.2;
+}
+
+.Single__DetailsItem > *:last-child {
+	max-width: 70%;
+	float: right;
+	margin-left: 6px;
+	text-align: right;
+}
+
+.Single__Genres {}
+
+.Single__Genres span:not(:last-of-type) {
+	margin-right: 6px;
+}
+
+.Single__Genres span:not(:last-of-type):after {
+	content: ",";
+	display: inline;
+	margin-left: -4px;
+}
+
+.Single__ReleaseDate {}
+.Single__Director {}
+.Single__Writer {}
+.Single__Cast {}
+
+@media screen and (min-width: 600px) {
+	.Single__Poster {
+		width: 30%;
+		float: left;
+	}
+	.Single__Information {
+		width: calc(70% - 12px);
+		float: right;
+		margin-left: 12px;
+	}
+	.Single__Title {
+		margin: 0 0 36px 0;
+		font-size: 2em;
+	}
+	.Single__Description {
+		margin: 32px 0;
+	}
+	.Single__Details {
+		margin: 32px 0;
+	}
+}
+
+.Cast, .Roles {}
+
+.Cast__Item:not(:first-of-type), .Roles__Item:not(:first-of-type) {
+	margin: 6px 0;
+}
+
+.Cast__Actor, .Roles__Role {
+	font-weight: bold;
+}
+
+/* ==============================================
+		NOT FOUND
+	============================================== */
+
+.NotFound {
+	font-size: 2.35em;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* ==============================================
+		FOOTER
+	============================================== */
+
+.Footer {
+	text-align: center;
+	color: #292929;
+	margin: 48px 0 32px 0;
+	display: block;
+	width: 100%;
+}
