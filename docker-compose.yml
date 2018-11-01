@@ -1,0 +1,21 @@
+version: '3'
+services:
+  database:
+    container_name: filmnet_database
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: filmnet
+      MYSQL_USER: filmnet
+      MYSQL_PASSWORD: xddddddddd
+    image: mysql:5.7
+    ports:
+      - "9906:3306"
+  web:
+    build: .
+    container_name: filmnet_web
+    depends_on:
+      - database
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - "4002:80"
