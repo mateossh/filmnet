@@ -2,9 +2,17 @@
 Our first battle with PHP. Filmweb clone, made for school purposes.
 
 ## INSTALLATION
+
+### Without Docker
 1. Set up database config in `config.php`
-2. Import tables schemas from `db.sql`
-3. Fill database with your own ideas xD
+2. Import tables schemas (and test data) from `filmnet.sql`
+3. If you want - fill database with your own ideas xD
+
+### With Docker
+1. Change db password in `docker-compose.yml`
+2. Change db host, port and password in `config.php` (by default filmnet uses 9906 as db port)
+3. `docker-compose build`
+4. `docker-compose up -d`
 
 ## LICENCE
 
@@ -24,9 +32,9 @@ Our first battle with PHP. Filmweb clone, made for school purposes.
 
      Being a dick includes - but is not limited to - the following instances:
 
-	 1a. Outright copyright infringement - Don't just copy this and change the name.  
-	 1b. Selling the unmodified original with no work done what-so-ever, that's REALLY being a dick.  
-	 1c. Modifying the original work to contain hidden harmful content. That would make you a PROPER dick.  
+	 1a. Outright copyright infringement - Don't just copy this and change the name.
+	 1b. Selling the unmodified original with no work done what-so-ever, that's REALLY being a dick.
+	 1c. Modifying the original work to contain hidden harmful content. That would make you a PROPER dick.
 
  2. If you become rich through modifications, related works/services, or supporting the original work,
  share the love. Only a dick would make loads off this work and not buy the original work's
