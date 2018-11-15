@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  database:
+    container_name: "filmnet_database"
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "true"
+      MYSQL_DATABASE: "filmnet"
+      MYSQL_USER: "filmnet"
+      MYSQL_PASSWORD: "ENTER-YOUR-PASSWORD-HERE"
+    image: mysql:5.7
+    volumes:
+      - ./filmnet.sql:/opt/filmnet.sql
+      - ./db-custom.sh:/docker-entrypoint-initdb.d/db-custom.sh
+    ports:
+      - "9906:3306"
+  web:
+    build: .
+    container_name: "filmnet_web"
+    depends_on:
+      - database
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - "4002:80"
