@@ -3,7 +3,7 @@ abstract class model {
 	protected $db;
 
 	function __construct() {
-		$this->db = @new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
+		$this->db = @new mysqli(DBHOST, DBUSER, DBPASS, DBNAME, DBPORT);
 		if ($this->db->connect_errno != 0) {
 			die("Nie udało się połączyć z bazą danych, błąd ".$this->db->connect_errno);
 		}
